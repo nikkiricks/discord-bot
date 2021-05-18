@@ -8,7 +8,8 @@ const readline = require('readline');
 const {google} = require('googleapis');
 
 var app = express();
-app.listen(process.env.PORT || 5000);
+const PORT = process.env.PORT || 5000
+app.listen(PORT);
 
 bot.once('ready', () => {
   console.log("Bobo bot is online ")
