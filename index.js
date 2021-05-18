@@ -7,6 +7,8 @@ const fs = require('fs');
 const readline = require('readline');
 const {google} = require('googleapis');
 
+var port = process.env.PORT || 8080;
+
 bot.once('ready', () => {
   console.log("Bobo bot is online ")
 })
