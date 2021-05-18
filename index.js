@@ -115,12 +115,16 @@ function accessSheet(auth) {
 
           rows.map((row) => {
             if (row[0] === capitalizeFirstLetter(args[0])) {
-              quotesArr.push(row[1])
+              if(row[1] != undefined && row[1] != null && row[1].length > 1) {
+                quotesArr.push(row[1])
+              }
             }
           })
           let oneRandomQuote = _.shuffle(quotesArr)[0]
           console.log("This is the random quote", oneRandomQuote)
-          msg.channel.send(oneRandomQuote)
+          if(oneRandomQuote != undefined && oneRandomQuote != null && oneRandomQuote.length > 1) {
+            msg.channel.send(oneRandomQuote)
+          }
         }
       });
     } 
