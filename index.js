@@ -1,15 +1,11 @@
 var _ = require('underscore');
 require('dotenv').config();
-var express = require(‘express’);
+
 const Discord = require('discord.js');
 const bot = new Discord.Client();
 const fs = require('fs');
 const readline = require('readline');
 const {google} = require('googleapis');
-
-var app = express();
-const PORT = process.env.PORT || 5000
-app.listen(PORT);
 
 bot.once('ready', () => {
   console.log("Bobo bot is online ")
